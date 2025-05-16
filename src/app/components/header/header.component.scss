@@ -8,4 +8,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    .icon-wrapper {
+        height: 2rem;
+        width: 2rem;
+    }
 }

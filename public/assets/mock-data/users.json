@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Marie",
+            "lastName": "Encyclopedia",
+            "email": "marie.ency@professor.com",
+            "password": "Placeholder1",
+            "roles": [
+                "user",
+                "teacher"
+            ],
+            "is_verified": true,
+            "has_accepted_terms": true,
+            "has_accepted_cookies": true,
+            "answered_terms_at": 1747399038,
+            "created_at": 1747399038,
+            "edited_at": null
+        },
+        {
+            "id": 2,
+            "firstName": "Paul",
+            "lastName": "Dictionnary",
+            "email": "Paul.dico@professor.com",
+            "password": "Placeholder2",
+            "roles": [
+                "user",
+                "teacher"
+            ],
+            "is_verified": true,
+            "has_accepted_terms": true,
+            "has_accepted_cookies": true,
+            "answered_terms_at": 1747399090,
+            "created_by": null,
+            "created_at": 1747399090,
+            "edited_at": null
+        }
+    ]
+}
