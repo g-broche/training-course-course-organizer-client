@@ -1,0 +1,11 @@
+@use "../../../scss" as *;
+
+header {
+    height: 75px;
+    width: 100%;
+    padding: 1rem;
+    background-color: $color-background-light;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
