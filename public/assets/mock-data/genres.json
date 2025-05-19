@@ -1,0 +1,16 @@
+{
+    "genres": [
+        {
+            "id": 1,
+            "label": "female"
+        },
+        {
+            "id": 2,
+            "label": "male"
+        },
+        {
+            "id": 3,
+            "label": "neutral"
+        }
+    ]
+}

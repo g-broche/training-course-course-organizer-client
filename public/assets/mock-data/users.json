@@ -2,6 +2,23 @@
     "users": [
         {
             "id": 1,
+            "firstName": "Lytis",
+            "lastName": "Builder",
+            "email": "lytis.build@admin.com",
+            "password": "placeholder1",
+            "roles": [
+                "user",
+                "admin"
+            ],
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747397038,
+            "createdAt": 1747397038,
+            "editedAt": null
+        },
+        {
+            "id": 2,
             "firstName": "Marie",
             "lastName": "Encyclopedia",
             "email": "marie.ency@professor.com",
@@ -10,30 +27,68 @@
                 "user",
                 "teacher"
             ],
-            "is_verified": true,
-            "has_accepted_terms": true,
-            "has_accepted_cookies": true,
-            "answered_terms_at": 1747399038,
-            "created_at": 1747399038,
-            "edited_at": null
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399038,
+            "createdAt": 1747399038,
+            "editedAt": null
         },
         {
-            "id": 2,
+            "id": 3,
             "firstName": "Paul",
             "lastName": "Dictionnary",
-            "email": "Paul.dico@professor.com",
+            "email": "paul.dico@professor.com",
             "password": "Placeholder2",
             "roles": [
                 "user",
                 "teacher"
             ],
-            "is_verified": true,
-            "has_accepted_terms": true,
-            "has_accepted_cookies": true,
-            "answered_terms_at": 1747399090,
-            "created_by": null,
-            "created_at": 1747399090,
-            "edited_at": null
+            "promos": {
+                "id": 2,
+                "name": "CDA PHP",
+                "description": "La CDA PHP/React",
+                "degree": {
+                    "id": 2,
+                    "label": "CDA"
+                },
+                "startDate": "24/03/2025",
+                "endDate": "21/03/2026",
+                "createdBy": 1,
+                "createdAt": 1747109090,
+                "editedAt": null,
+                "status": {
+                    "id": 2,
+                    "label": "ongoing"
+                }
+            },
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399090,
+            "createdBy": null,
+            "createdAt": 1747399090,
+            "editedAt": null
         }
     ]
 }

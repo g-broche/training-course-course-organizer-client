@@ -1,0 +1,12 @@
+{
+    "degrees": [
+        {
+            "id": 1,
+            "label": "DWWM"
+        },
+        {
+            "id": 2,
+            "label": "CDA"
+        }
+    ]
+}

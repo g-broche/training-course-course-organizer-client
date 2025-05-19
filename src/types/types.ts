@@ -8,7 +8,7 @@ export interface User {
     firstName: string;
     lastName: string;
     email: string;
-    role: string[];
+    roles: string[];
     is_verified: boolean;
     has_accepted_terms: boolean;
     has_accepted_cookies: boolean;
@@ -22,7 +22,7 @@ export interface MockUser {
     lastName: string;
     email: string;
     password: string;
-    role: string[];
+    roles: string[];
     is_verified: boolean;
     has_accepted_terms: boolean;
     has_accepted_cookies: boolean;

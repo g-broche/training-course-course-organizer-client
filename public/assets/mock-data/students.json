@@ -1,0 +1,2502 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "firstName": "Betty",
+            "lastName": "Atkinson",
+            "birthdate": "18/09/1995",
+            "genre": "male",
+            "email": "student1@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 1,
+                    "promo": 1,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "firstName": "Brandon",
+            "lastName": "Villanueva",
+            "birthdate": "04/01/2004",
+            "genre": "neutral",
+            "email": "student2@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "firstName": "Melanie",
+            "lastName": "Bass",
+            "birthdate": "04/05/2003",
+            "genre": "neutral",
+            "email": "student3@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "firstName": "Rebecca",
+            "lastName": "Erickson",
+            "birthdate": "19/06/1992",
+            "genre": "neutral",
+            "email": "student4@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 4
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "firstName": "Jeremy",
+            "lastName": "Myers",
+            "birthdate": "04/09/1987",
+            "genre": "neutral",
+            "email": "student5@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 2
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "firstName": "Grace",
+            "lastName": "Martinez",
+            "birthdate": "05/04/2001",
+            "genre": "neutral",
+            "email": "student6@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "firstName": "Robert",
+            "lastName": "Allen",
+            "birthdate": "24/08/1986",
+            "genre": "male",
+            "email": "student7@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 4
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "firstName": "Tonya",
+            "lastName": "Patton",
+            "birthdate": "09/09/1988",
+            "genre": "neutral",
+            "email": "student8@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 2
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "firstName": "Katherine",
+            "lastName": "Carpenter",
+            "birthdate": "25/12/1995",
+            "genre": "neutral",
+            "email": "student9@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "firstName": "Jamie",
+            "lastName": "Richardson",
+            "birthdate": "29/03/2004",
+            "genre": "neutral",
+            "email": "student10@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "firstName": "Jon",
+            "lastName": "Johnson",
+            "birthdate": "03/01/1987",
+            "genre": "neutral",
+            "email": "student11@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "firstName": "Brittany",
+            "lastName": "Freeman",
+            "birthdate": "22/03/1986",
+            "genre": "neutral",
+            "email": "student12@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "firstName": "Laura",
+            "lastName": "Marquez",
+            "birthdate": "27/05/2004",
+            "genre": "male",
+            "email": "student13@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "firstName": "Oscar",
+            "lastName": "Riley",
+            "birthdate": "22/03/1985",
+            "genre": "neutral",
+            "email": "student14@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "firstName": "Lisa",
+            "lastName": "Stevenson",
+            "birthdate": "28/05/1986",
+            "genre": "female",
+            "email": "student15@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 1,
+                    "promo": 1,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "firstName": "Christina",
+            "lastName": "Kelly",
+            "birthdate": "09/09/1996",
+            "genre": "female",
+            "email": "student16@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 4
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "firstName": "Marvin",
+            "lastName": "Ramirez",
+            "birthdate": "27/05/1986",
+            "genre": "female",
+            "email": "student17@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 1,
+                    "promo": 1,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "firstName": "Jamie",
+            "lastName": "Saunders",
+            "birthdate": "13/04/2001",
+            "genre": "female",
+            "email": "student18@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 2,
+                    "promo": 2,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "firstName": "Gregory",
+            "lastName": "Torres",
+            "birthdate": "25/01/1986",
+            "genre": "female",
+            "email": "student19@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "firstName": "Timothy",
+            "lastName": "Berry",
+            "birthdate": "15/09/1987",
+            "genre": "female",
+            "email": "student20@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 2,
+                    "promo": 2,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 3
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "firstName": "Sylvia",
+            "lastName": "Wood",
+            "birthdate": "30/11/1988",
+            "genre": "female",
+            "email": "student21@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 2
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 1,
+                    "promo": 1,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "firstName": "Olivia",
+            "lastName": "Nash",
+            "birthdate": "22/03/2003",
+            "genre": "male",
+            "email": "student22@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 2,
+                    "promo": 2,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "firstName": "Ricardo",
+            "lastName": "Lucas",
+            "birthdate": "15/12/1987",
+            "genre": "male",
+            "email": "student23@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 5,
+                    "promo": 1,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 0
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "firstName": "Bonnie",
+            "lastName": "Jarvis",
+            "birthdate": "09/01/1995",
+            "genre": "male",
+            "email": "student24@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 2,
+                    "promo": 2,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "firstName": "Joshua",
+            "lastName": "Mahoney",
+            "birthdate": "25/03/1994",
+            "genre": "male",
+            "email": "student25@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 3,
+                    "promo": 1,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 9,
+                    "promo": 1,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 6,
+                    "promo": 1,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "firstName": "Summer",
+            "lastName": "Collins",
+            "birthdate": "23/03/1999",
+            "genre": "male",
+            "email": "student26@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "firstName": "Joseph",
+            "lastName": "Walker",
+            "birthdate": "13/09/1988",
+            "genre": "female",
+            "email": "student27@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 10,
+                    "promo": 1,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 4
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "firstName": "Mark",
+            "lastName": "Peterson",
+            "birthdate": "24/10/1986",
+            "genre": "neutral",
+            "email": "student28@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 2,
+                    "promo": 2,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 8,
+                    "promo": 2,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 10,
+                    "promo": 2,
+                    "label": "Java",
+                    "isHardSkill": true,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "firstName": "Nicholas",
+            "lastName": "Zuniga",
+            "birthdate": "05/08/1988",
+            "genre": "male",
+            "email": "student29@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 7,
+                    "promo": 1,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 0
+                },
+                {
+                    "id": 2,
+                    "promo": 1,
+                    "label": "french",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 4,
+                    "promo": 1,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 1
+                },
+                {
+                    "id": 8,
+                    "promo": 1,
+                    "label": "logic",
+                    "isHardSkill": false,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "firstName": "Sabrina",
+            "lastName": "Thomas",
+            "birthdate": "05/03/2005",
+            "genre": "male",
+            "email": "student30@student.test",
+            "password": "studenttest",
+            "isVerified": true,
+            "hasAcceptedTerms": true,
+            "hasAcceptedCookies": true,
+            "answeredTermsAt": 1747399590,
+            "createdBy": 1,
+            "createdAt": 1747399590,
+            "editedAt": null,
+            "roles": [
+                "user",
+                "student"
+            ],
+            "degrees": [
+                "DWWM"
+            ],
+            "promos": [
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
+                }
+            ],
+            "skills": [
+                {
+                    "id": 1,
+                    "promo": 2,
+                    "label": "confidence",
+                    "isHardSkill": false,
+                    "level": 1
+                },
+                {
+                    "id": 3,
+                    "promo": 2,
+                    "label": "create static applications",
+                    "isHardSkill": true,
+                    "level": 3
+                },
+                {
+                    "id": 7,
+                    "promo": 2,
+                    "label": "curious",
+                    "isHardSkill": false,
+                    "level": 4
+                },
+                {
+                    "id": 4,
+                    "promo": 2,
+                    "label": "create dynamic applications",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 9,
+                    "promo": 2,
+                    "label": "Angular",
+                    "isHardSkill": true,
+                    "level": 4
+                },
+                {
+                    "id": 5,
+                    "promo": 2,
+                    "label": "SQL",
+                    "isHardSkill": true,
+                    "level": 2
+                },
+                {
+                    "id": 6,
+                    "promo": 2,
+                    "label": "MongoDB",
+                    "isHardSkill": true,
+                    "level": 0
+                }
+            ]
+        }
+    ]
+}

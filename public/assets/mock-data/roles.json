@@ -1,0 +1,20 @@
+{
+    "roles": [
+        {
+            "id": 1,
+            "label": "user"
+        },
+        {
+            "id": 2,
+            "label": "admin"
+        },
+        {
+            "id": 3,
+            "label": "teacher"
+        },
+        {
+            "id": 4,
+            "label": "student"
+        }
+    ]
+}

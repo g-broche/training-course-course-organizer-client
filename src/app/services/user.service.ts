@@ -42,4 +42,16 @@ export class UserService {
       })
     );
   }
+
+  get isUserLogged$(): Observable<boolean> {
+    return this.user$.pipe(
+      map(user => !!user)
+    );
+  }
+
+  get isUserTeacher$(): Observable<boolean> {
+    return this.user$.pipe(
+      map(user => !!user && user.roles.includes('teacher'))
+    );
+  }
 }

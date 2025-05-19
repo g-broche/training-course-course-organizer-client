@@ -1,0 +1,16 @@
+{
+    "status": [
+        {
+            "id": 1,
+            "label": "ended"
+        },
+        {
+            "id": 2,
+            "label": "ongoing"
+        },
+        {
+            "id": 3,
+            "label": "planned"
+        }
+    ]
+}
