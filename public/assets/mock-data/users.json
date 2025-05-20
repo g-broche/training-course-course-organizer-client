@@ -11,7 +11,21 @@
                 "admin"
             ],
             "promos": [
-                1
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": "ongoing"
+                }
             ],
             "isVerified": true,
             "hasAcceptedTerms": true,
@@ -31,7 +45,21 @@
                 "teacher"
             ],
             "promos": [
-                2
+                {
+                    "id": 2,
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": "ongoing"
+                }
             ],
             "isVerified": true,
             "hasAcceptedTerms": true,
@@ -50,24 +78,41 @@
                 "user",
                 "teacher"
             ],
-            "promos": {
-                "id": 2,
-                "name": "CDA PHP",
-                "description": "La CDA PHP/React",
-                "degree": {
+            "promos": [
+                {
                     "id": 2,
-                    "label": "CDA"
+                    "name": "CDA PHP",
+                    "description": "La CDA PHP/React",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": {
+                        "id": 2,
+                        "label": "ongoing"
+                    }
                 },
-                "startDate": "24/03/2025",
-                "endDate": "21/03/2026",
-                "createdBy": 1,
-                "createdAt": 1747109090,
-                "editedAt": null,
-                "status": {
-                    "id": 2,
-                    "label": "ongoing"
+                {
+                    "id": 1,
+                    "name": "CDA Java",
+                    "description": "La CDA Java/Angular",
+                    "degree": {
+                        "id": 2,
+                        "label": "CDA"
+                    },
+                    "startDate": "24/03/2025",
+                    "endDate": "21/03/2026",
+                    "createdBy": 1,
+                    "createdAt": 1747109090,
+                    "editedAt": null,
+                    "status": "ongoing"
                 }
-            },
+            ],
             "isVerified": true,
             "hasAcceptedTerms": true,
             "hasAcceptedCookies": true,

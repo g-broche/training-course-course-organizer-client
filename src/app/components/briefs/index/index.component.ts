@@ -5,10 +5,11 @@ import { UserService } from '../../../services/user.service';
 import { BriefService } from '../../../services/brief.service';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../header/header.component';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'brief-index',
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './index.component.html',
   styleUrl: './index.component.scss'
 })
@@ -17,7 +18,7 @@ export class BriefIndexComponent implements OnInit {
   isUserTeacher$: Observable<boolean>;
   briefs$: Observable<Brief[]> = of([]);
 
-  constructor(private userService: UserService, private briefService: BriefService) {
+  constructor(private userService: UserService, private briefService: BriefService, private router: Router) {
     this.user$ = this.userService.user$
     this.isUserTeacher$ = this.userService.isUserTeacher$;
   }

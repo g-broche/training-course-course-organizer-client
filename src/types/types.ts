@@ -14,7 +14,7 @@ export interface User {
     lastName: string;
     email: string;
     roles: Role[];
-    promos: number[];
+    promos: MockPromo[];
     is_verified: boolean;
     has_accepted_terms: boolean;
     has_accepted_cookies: boolean;
@@ -29,7 +29,7 @@ export interface MockUser {
     email: string;
     password: string;
     roles: Role[];
-    promos: number[];
+    promos: MockPromo[];
     is_verified: boolean;
     has_accepted_terms: boolean;
     has_accepted_cookies: boolean;

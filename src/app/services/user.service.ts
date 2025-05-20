@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Credentials, MockUser, User } from '../../types/types';
+import { Credentials, MockPromo, MockUser, User } from '../../types/types';
 import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { omit } from '../shared/utils/data-utils';
@@ -54,9 +54,13 @@ export class UserService {
     );
   }
 
-  get userPromos$(): Observable<number[] | null> {
+  get userPromos$(): Observable<MockPromo[] | null> {
     return this.user$.pipe(
-      map(user => user?.promos || null)
+      map(user => {
+        console.log("user", user)
+        return user?.promos ?? null
+      }
+      )
     );
   }
 }

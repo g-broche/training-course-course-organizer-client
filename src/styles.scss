@@ -22,6 +22,7 @@ div.page-wrapper {
 }
 
 main {
+    width: 100%;
     padding: 2rem 1rem;
     background-color: $color-background-light;
 }
@@ -157,4 +158,8 @@ app-home {
 
 brief-index {
     width: 100%;
+}
+
+app-details {
+    width: 100%
 }

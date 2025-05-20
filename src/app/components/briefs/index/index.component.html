@@ -23,7 +23,7 @@
                     }
                     @case ("ongoing") {
                     <button class="warning">Edit</button>
-                    <button>Assign</button>
+                    <button [routerLink]="['/briefs', brief.id]">Assign</button>
                     }
                     @case ("planned") {
                     <button class="warning">Edit</button>
