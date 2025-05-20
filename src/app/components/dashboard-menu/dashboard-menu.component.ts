@@ -3,10 +3,11 @@ import { UserService } from '../../services/user.service';
 import { Observable } from 'rxjs';
 import { User } from '../../../types/types';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-menu',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './dashboard-menu.component.html',
   styleUrl: './dashboard-menu.component.scss'
 })

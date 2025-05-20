@@ -3,11 +3,10 @@ import { DashboardMenuComponent } from '../dashboard-menu/dashboard-menu.compone
 import { UserService } from '../../services/user.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, DashboardMenuComponent, CommonModule],
+  imports: [DashboardMenuComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

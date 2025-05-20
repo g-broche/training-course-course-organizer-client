@@ -28,13 +28,12 @@ export class UserService {
   }
 
   logTestUser(credentials: Credentials): Observable<User> {
-    return this.http.get<{ users: MockUser[] }>('/assets/mock-data/users.json').pipe(
+    return this.http.get<{ data: MockUser[] }>('/assets/mock-data/users.json').pipe(
       map((response) => {
-        const foundUser = response.users.find(
+        const foundUser = response.data.find(
           (u) => u.email === credentials.email && u.password === credentials.password
         );
         if (!foundUser) throw new Error('Invalid credentials');
-
         const apiLikeUser: User = omit(foundUser, ["password", "created_by"])
         this.setUser(apiLikeUser as User);
         console.log(foundUser, apiLikeUser)
@@ -52,6 +51,12 @@ export class UserService {
   get isUserTeacher$(): Observable<boolean> {
     return this.user$.pipe(
       map(user => !!user && user.roles.includes('teacher'))
+    );
+  }
+
+  get userPromos$(): Observable<number[] | null> {
+    return this.user$.pipe(
+      map(user => user?.promos || null)
     );
   }
 }

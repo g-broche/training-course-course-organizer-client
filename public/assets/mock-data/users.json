@@ -1,5 +1,5 @@
 {
-    "users": [
+    "data": [
         {
             "id": 1,
             "firstName": "Lytis",
@@ -9,6 +9,9 @@
             "roles": [
                 "user",
                 "admin"
+            ],
+            "promos": [
+                1
             ],
             "isVerified": true,
             "hasAcceptedTerms": true,
@@ -28,24 +31,7 @@
                 "teacher"
             ],
             "promos": [
-                {
-                    "id": 1,
-                    "name": "CDA Java",
-                    "description": "La CDA Java/Angular",
-                    "degree": {
-                        "id": 2,
-                        "label": "CDA"
-                    },
-                    "startDate": "24/03/2025",
-                    "endDate": "21/03/2026",
-                    "createdBy": 1,
-                    "createdAt": 1747109090,
-                    "editedAt": null,
-                    "status": {
-                        "id": 2,
-                        "label": "ongoing"
-                    }
-                }
+                2
             ],
             "isVerified": true,
             "hasAcceptedTerms": true,
