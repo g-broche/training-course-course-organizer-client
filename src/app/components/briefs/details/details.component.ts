@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, combineLatest, filter, map, Observable, take } from 'rxjs';
 import { Brief, Student, User } from '../../../../types/types';
 import { UserService } from '../../../services/user.service';
 import { PromoService } from '../../../services/promo.service';
 import { CommonModule } from '@angular/common';
 import { BriefService } from '../../../services/brief.service';
 import { ActivatedRoute } from '@angular/router';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
@@ -21,9 +21,10 @@ export class BriefDetailsComponent {
   isUserTeacher$: Observable<boolean | null>;
   studentList$: Observable<Student[] | null>;
   assignedStudents: Map<number, Student> = new Map();
+  groups: { name: string, members: Student[] }[] = [];
 
-  get groupNameInputs(): FormArray {
-    return this.form.get('groupNames') as FormArray;
+  get assignedStudentAmount(): number {
+    return this.assignedStudents.size
   }
 
   constructor(
@@ -42,39 +43,45 @@ export class BriefDetailsComponent {
         this.brief$.next(brief);
       });
     });
-    this.generateForm();
+
+    combineLatest([this.userService.isUserTeacher$, this.brief$])
+      .pipe(
+        filter(([isTeacher, brief]) => !!isTeacher && !!brief),
+        take(1)
+      )
+      .subscribe(() => {
+        this.generateForm();
+      });
   }
 
   generateForm() {
     this.form = this.formBuilder.group({
-      amount: [
+      amountPerGroup: [
         1,
-        Validators.required,
-        Validators.min(1),
-        Validators.max(5)
+        Validators.compose([
+          Validators.required,
+          Validators.min(1),
+          Validators.max(5)
+        ]
+        )
       ],
       password: ['', Validators.required],
       mixDwwm: [false],
       mixAges: [false],
-      groupNames: this.formBuilder.array([])
     });
+  }
 
-    this.studentList$.subscribe((students) => {
-      const maxAmount = Math.floor((students?.length || 0) / 2);
-      const amountControl = this.form.get('amount');
-      if (amountControl) {
-        amountControl.setValidators([
-          Validators.required,
-          Validators.min(1),
-          Validators.max(maxAmount)
-        ]);
-        amountControl.updateValueAndValidity();
-      }
-    });
+  private updateAmountValidator() {
+    const amountControl = this.form.get('amountPerGroup');
+    if (!amountControl) return;
 
-    this.form.get('amount')?.valueChanges.subscribe((newAmount: number) => {
-      this.adjustInputs(newAmount);
-    });
+    const maxAmount = this.assignedStudentAmount;
+    amountControl.setValidators([
+      Validators.required,
+      Validators.min(1),
+      Validators.max(maxAmount)
+    ]);
+    amountControl.updateValueAndValidity();
   }
 
   isStudentAssigned(studentId: number): boolean {
@@ -83,12 +90,12 @@ export class BriefDetailsComponent {
 
   addStudentToBrief(student: Student): void {
     this.assignedStudents.set(student.id, student)
-    console.log(this.assignedStudents)
+    this.updateAmountValidator()
   }
 
   removeStudentFromBrief(studentId: number): void {
     this.assignedStudents.delete(studentId)
-    console.log(this.assignedStudents)
+    this.updateAmountValidator()
   }
 
   getOngoingPromoName(student: Student): string {
@@ -96,22 +103,41 @@ export class BriefDetailsComponent {
     return ongoingPromo?.name || 'no valid promo';
   }
 
-  private adjustInputs(count: number) {
-    const inputGroupNameArray = this.groupNameInputs;
-    const currentLength = inputGroupNameArray.length;
+  generateGroups() {
+    this.groups = []
+    const amount = this.countNecessaryGroups(this.assignedStudentAmount, this.form.get('amountPerGroup')!.value)
+    console.log("amount of groups", amount)
+    for (let index = 0; index < amount; index++) {
+      this.groups.push({
+        name: `Group ${index}`,
+        members: []
+      })
+    }
+    this.allocateStudentsToGroups()
+    console.log(this.groups)
+  }
 
-    if (count > currentLength) {
-      for (let i = currentLength; i < count; i++) {
-        inputGroupNameArray.push(this.formBuilder.control(''));
-      }
-    } else if (count < currentLength) {
-      for (let i = currentLength - 1; i >= count; i--) {
-        inputGroupNameArray.removeAt(i);
+  countNecessaryGroups(studentAmount: number, amountPerGroup: number) {
+    return Math.ceil(studentAmount / amountPerGroup)
+  }
+  countMaxPerGroups(studentAmount: number, amountPerGroup: number) {
+    return Math.ceil(studentAmount / amountPerGroup)
+  }
+
+  allocateStudentsToGroups() {
+    let studentsToAllocate = Array.from(this.assignedStudents.values())
+    const maxPerGroup = this.form.get('amountPerGroup')!.value
+    for (const group of this.groups) {
+      while (group.members.length < maxPerGroup && studentsToAllocate.length > 0) {
+        const indexOfStudentToAdd = this.pickRandomStudentIndex(studentsToAllocate)
+        group.members.push(studentsToAllocate[indexOfStudentToAdd])
+        studentsToAllocate.splice(indexOfStudentToAdd, 1)
       }
     }
   }
 
-  generateGroups() {
-
+  private pickRandomStudentIndex(availableStudents: Student[]): number {
+    const randomIndex = Math.floor(Math.random() * availableStudents.length)
+    return randomIndex
   }
 }

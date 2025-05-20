@@ -22,10 +22,10 @@
                     </td>
                     <td class="actions">
                         @if(isStudentAssigned(student.id)){
-                        <button (click)="removeStudentFromBrief(student.id)">Unassign</button>
+                        <button (click)="removeStudentFromBrief(student.id)" class="warning">Unassign</button>
                         }
                         @else{
-                        <button (click)="addStudentToBrief(student)" class="warning">Assign</button>
+                        <button (click)="addStudentToBrief(student)">Assign</button>
                         }
                     </td>
                 </tr>
@@ -34,24 +34,38 @@
         </table>
     </section>
     <section class="group-generation">
-        <div class="generation-base">
+        <h2>Groups configuration</h2>
+        <form [formGroup]="form">
             <div class="form-group">
-                <input type="number" formControlName="amount" id="amount-per-group">
-                <label for="amount-per-group">Students per group</label>
+                <label for="group-student-amount">Students per group</label>
+                <input type="number" formControlName="amountPerGroup" id="group-student-amount" min="1"
+                    max="{{assignedStudentAmount}}" value="1">
             </div>
             <div class="form-group">
-                <input type="checkbox" formControlName="mixDwwm" id="mix-dwwm">
                 <label for="mix-dwwm">Mix DWWM</label>
+                <input type="checkbox" formControlName="mixDwwm" id="mix-dwwm">
             </div>
             <div class="form-group">
-                <input type="checkbox" formControlName="mixAges" id="mix-age">
                 <label for="mix-age">Mix ages</label>
+                <input type="checkbox" formControlName="mixAges" id="mix-age">
             </div>
-        </div>
-        <button (click)="generateGroups()">Generate</button>
-        <div class="generation-name">
-
-        </div>
+            <button (click)="generateGroups()">Prepare</button>
+        </form>
+    </section>
+    <section class="group-affectation">
+        <h2>Groups affectation</h2>
+        <ul class="group-list">
+            @for (group of groups; track $index) {
+            <li class="group">
+                <h3>{{$index+1}} : {{group.name}}</h3>
+                <div class="group-members">
+                    @for (student of group.members; track $index) {
+                    <div class="member">{{student.lastName}} {{student.firstName}}</div>
+                    }
+                </div>
+            </li>
+            }
+        </ul>
     </section>
 </main>
 }
