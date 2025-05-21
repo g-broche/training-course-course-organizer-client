@@ -7,10 +7,12 @@ import { CommonModule } from '@angular/common';
 import { BriefService } from '../../../services/brief.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CdkDragDrop, transferArrayItem, DragDropModule } from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, DragDropModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
@@ -139,5 +141,35 @@ export class BriefDetailsComponent {
   private pickRandomStudentIndex(availableStudents: Student[]): number {
     const randomIndex = Math.floor(Math.random() * availableStudents.length)
     return randomIndex
+  }
+
+  onStudentDrop(event: CdkDragDrop<Student[]>, targetGroup: { name: string, members: Student[] }) {
+    const previousGroup = this.groups.find(g => g.members === event.previousContainer.data);
+    const currentGroup = this.groups.find(g => g.members === event.container.data);
+
+    if (!previousGroup || !currentGroup) return;
+
+    if (event.previousContainer === event.container) {
+      // Same group, reorder if desired
+      return;
+    }
+
+    // const maxPerGroup = this.form.get('amountPerGroup')!.value;
+    // if (currentGroup.members.length >= maxPerGroup) {
+    //   // Invalid drop – target group is full
+    //   return;
+    // }
+
+    // Move the student from the previous group to the new one
+    transferArrayItem(
+      event.previousContainer.data,
+      event.container.data,
+      event.previousIndex,
+      event.currentIndex
+    );
+  }
+
+  get connectedDropListIds(): string[] {
+    return this.groups.map((_, i) => 'group-' + i);
   }
 }

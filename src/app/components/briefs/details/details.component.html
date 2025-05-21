@@ -54,18 +54,22 @@
     </section>
     <section class="group-affectation">
         <h2>Groups affectation</h2>
-        <ul class="group-list">
+        <div class="group-list" cdkDropListGroup>
             @for (group of groups; track $index) {
-            <li class="group">
+            <div class="group">
                 <h3>{{$index+1}} : {{group.name}}</h3>
-                <div class="group-members">
+                <div class="group-members" [id]="'group-' + $index" cdkDropList [cdkDropListData]="group.members"
+                    (cdkDropListDropped)="onStudentDrop($event, group)" [cdkDropListConnectedTo]="connectedDropListIds">
+
                     @for (student of group.members; track $index) {
-                    <div class="member">{{student.lastName}} {{student.firstName}}</div>
+                    <div class="member" cdkDrag [cdkDragData]="student">
+                        {{ student.lastName }} {{ student.firstName }}
+                    </div>
                     }
                 </div>
-            </li>
+            </div>
             }
-        </ul>
+        </div>
     </section>
 </main>
 }
