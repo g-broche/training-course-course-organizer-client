@@ -41,7 +41,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .group {
@@ -50,15 +50,33 @@
         flex-direction: column;
         align-items: center;
         gap: .5rem;
+
+        input {
+            margin-bottom: 1rem;
+        }
     }
 
     .group-members {
         width: 100%;
+        border-radius: .5rem;
+        padding: 1.5rem .5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
+
+
+    .group-members {
+        transition: background-color 0.3s ease;
+    }
+
+}
+
+/* When dragging is active anywhere */
+.group-affectation:has(.cdk-drop-list-dragging) .group-members {
+    background-color: darken($color-neutral, 10%);
+
 }
 
 .member {
@@ -76,7 +94,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     opacity: 0.95;
     background-color: $color-neutral;
-    color: white;
+    color: $color-font-light;
     transform: scale(1.05);
     transition: all 0.2s ease;
 }

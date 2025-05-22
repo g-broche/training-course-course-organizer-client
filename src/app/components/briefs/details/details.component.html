@@ -9,6 +9,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Done DWWM</th>
                     <th>Promo</th>
                     <th>Actions</th>
                 </tr>
@@ -17,6 +18,10 @@
                 @for (student of studentList$ | async; track $index) {
                 <tr>
                     <td>{{ student.lastName }} {{ student.firstName }}</td>
+                    <td>
+                        @if(hasStudentDoneDWWM(student)) {Yes}
+                        @else {No}
+                    </td>
                     <td>
                         {{ getOngoingPromoName(student) }}
                     </td>
@@ -57,13 +62,13 @@
         <div class="group-list" cdkDropListGroup>
             @for (group of groups; track $index) {
             <div class="group">
-                <h3>{{$index+1}} : {{group.name}}</h3>
+                <input type="text" [(ngModel)]="group.name" placeholder="Group name" class="group-name-input" />
                 <div class="group-members" [id]="'group-' + $index" cdkDropList [cdkDropListData]="group.members"
                     (cdkDropListDropped)="onStudentDrop($event, group)" [cdkDropListConnectedTo]="connectedDropListIds">
 
                     @for (student of group.members; track $index) {
                     <div class="member" cdkDrag [cdkDragData]="student">
-                        {{ student.lastName }} {{ student.firstName }}
+                        {{ student.lastName }} {{ student.firstName }} @if(hasStudentDoneDWWM(student)){(DWWM)}
                     </div>
                     }
                 </div>
