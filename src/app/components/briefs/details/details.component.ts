@@ -103,17 +103,19 @@ export class BriefDetailsComponent {
   }
 
   generateGroups() {
-    this.groups = []
     const amount = this.countNecessaryGroups(this.assignedStudentAmount, this.form.get('amountPerGroup')!.value)
-    console.log("amount of groups", amount)
+    this.createRequiredGroups(amount)
+    this.allocateStudentsToGroups()
+  }
+
+  createRequiredGroups(amount: number) {
+    this.groups = []
     for (let index = 0; index < amount; index++) {
       this.groups.push({
         name: `Group ${index + 1}`,
         members: []
       })
     }
-    this.allocateStudentsToGroups()
-    console.log(this.groups)
   }
 
   countNecessaryGroups(studentAmount: number, amountPerGroup: number) {
