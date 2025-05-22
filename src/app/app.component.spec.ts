@@ -2,6 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
+import { LegalMentionsComponent } from './pages/legal-mentions/legal-mentions.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +11,10 @@ describe('AppComponent', () => {
       imports: [AppComponent],
       providers: [
         provideHttpClient(),
-        provideHttpClientTesting()
+        provideHttpClientTesting(),
+        provideRouter([
+          { path: 'legal-mentions', component: LegalMentionsComponent }
+        ]),
       ]
     }).compileComponents();
   });
