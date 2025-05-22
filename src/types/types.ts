@@ -47,8 +47,8 @@ export interface MockPromo {
         id: 2,
         label: Degree
     },
-    startDate: Date,
-    endDate: Date,
+    startDate: string,
+    endDate: string,
     createdBy: number,
     createdAt: number,
     editedAt: null,
@@ -67,7 +67,7 @@ export interface Student {
     id: number,
     firstName: string;
     lastName: string;
-    birthdate: Date;
+    birthdate: string;
     genre: Genre;
     email: String;
     isVerified: boolean;
@@ -87,7 +87,7 @@ export interface MockStudent {
     id: number,
     firstName: string;
     lastName: string;
-    birthdate: Date;
+    birthdate: string;
     genre: Genre;
     email: String;
     password: String;

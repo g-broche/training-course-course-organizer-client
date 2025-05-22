@@ -79,13 +79,14 @@ export class BriefDetailsComponent {
     amountControl.updateValueAndValidity();
   }
 
+  hasStudentDoneDWWM(student: Student) {
+    return student.degrees.includes("DWWM")
+  }
+
   isStudentAssigned(studentId: number): boolean {
     return this.assignedStudents.has(studentId)
   }
 
-  hasStudentDoneDWWM(student: Student) {
-    return student.degrees.includes("DWWM")
-  }
 
   addStudentToBrief(student: Student): void {
     this.assignedStudents.set(student.id, student)
