@@ -4,7 +4,7 @@ import { Brief, User } from '../../../../types/types';
 import { UserService } from '../../../services/user.service';
 import { BriefService } from '../../../services/brief.service';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../../header/header.component';
+import { HeaderComponent } from '../../../layout/header/header.component';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({

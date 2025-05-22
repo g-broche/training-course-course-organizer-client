@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
-import { LoginFormComponent } from '../login-form/login-form.component';
+import { LoginFormComponent } from '../../components/login-form/login-form.component';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { User } from '../../../types/types';

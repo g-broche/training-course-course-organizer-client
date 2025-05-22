@@ -1,0 +1,12 @@
+@use "../../../scss" as *;
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: $color-background-darkest;
+    color: $color-font-light;
+    font-size: $font-size-large;
+    font-weight: bold;
+}
