@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject, combineLatest, filter, map, Observable, take } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Brief, Student, User } from '../../../../types/types';
 import { UserService } from '../../../services/user.service';
 import { PromoService } from '../../../services/promo.service';
 import { CommonModule } from '@angular/common';
 import { BriefService } from '../../../services/brief.service';
 import { ActivatedRoute } from '@angular/router';
-import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CdkDragDrop, transferArrayItem, DragDropModule } from '@angular/cdk/drag-drop';
 
 
@@ -46,14 +46,7 @@ export class BriefDetailsComponent {
       });
     });
 
-    combineLatest([this.userService.isUserTeacher$, this.brief$])
-      .pipe(
-        filter(([isTeacher, brief]) => !!isTeacher && !!brief),
-        take(1)
-      )
-      .subscribe(() => {
-        this.generateForm();
-      });
+    this.generateForm();
   }
 
   generateForm() {
@@ -133,7 +126,6 @@ export class BriefDetailsComponent {
   allocateStudentsToGroups() {
     const mixDwwm = this.form.get('mixDwwm')?.value;
     const amountPerGroup = this.form.get('amountPerGroup')!.value;
-    const totalGroups = this.groups.length;
 
     const students = Array.from(this.assignedStudents.values());
 
@@ -142,38 +134,52 @@ export class BriefDetailsComponent {
 
     if (!mixDwwm) {
       // Default random allocation
-      let studentsToAllocate = this.shuffleArray([...students]);
-      while (studentsToAllocate.length > 0) {
-        for (const group of this.groups) {
-          if (group.members.length < amountPerGroup && studentsToAllocate.length > 0) {
-            group.members.push(studentsToAllocate.pop()!);
-          }
-        }
-      }
+      this.allocateGroupMembersRandomly(students, amountPerGroup);
       return;
     }
+    this.allocateGroupMembersRandomlyWhileBalancingDWWM(students, amountPerGroup);
 
-    // Split by DWWM flag
+  }
+
+  allocateGroupMembersRandomly(students: Student[], amountPerGroup: number) {
+    let studentsToAllocate = this.shuffleArray([...students]);
+    while (studentsToAllocate.length > 0) {
+      for (const group of this.groups) {
+        if (group.members.length < amountPerGroup && studentsToAllocate.length > 0) {
+          group.members.push(studentsToAllocate.pop()!);
+        }
+      }
+    }
+  }
+
+  allocateGroupMembersRandomlyWhileBalancingDWWM(students: Student[], amountPerGroup: number) {
+    // Split students based on DWWM factor
     let dwwmStudents = students.filter(s => this.hasStudentDoneDWWM(s));
     let nonDwwmStudents = students.filter(s => !this.hasStudentDoneDWWM(s));
 
-    // Shuffle to avoid bias
+    // Shuffle both arrays to make the generation non static
     dwwmStudents = this.shuffleArray(dwwmStudents);
     nonDwwmStudents = this.shuffleArray(nonDwwmStudents);
 
-    // Balanced distribution
-    for (let i = 0; i < totalGroups; i++) {
+    // For each group
+    for (let i = 0; i < this.groups.length; i++) {
       const group = this.groups[i];
 
+      // while the group hasn't reached desired size and there are students available to add
       while (group.members.length < amountPerGroup && (dwwmStudents.length > 0 || nonDwwmStudents.length > 0)) {
+        // if the group has no student with DWWM, add a DWWM student
         if (dwwmStudents.length > 0 && group.members.every(s => !this.hasStudentDoneDWWM(s))) {
           group.members.push(dwwmStudents.pop()!);
+          // if the group has no student without DWWM, add a student without DWWM
         } else if (nonDwwmStudents.length > 0 && group.members.every(s => this.hasStudentDoneDWWM(s))) {
           group.members.push(nonDwwmStudents.pop()!);
+          // If there are already student of both types then attribute the type which is more numerous
+          // is the remaining students to allocate
         } else if (dwwmStudents.length > nonDwwmStudents.length) {
           group.members.push(dwwmStudents.pop()!);
         } else if (nonDwwmStudents.length > dwwmStudents.length) {
           group.members.push(nonDwwmStudents.pop()!);
+          // fallback cases to fill group and make sure everyone is put in
         } else if (dwwmStudents.length > 0) {
           group.members.push(dwwmStudents.pop()!);
         } else if (nonDwwmStudents.length > 0) {
