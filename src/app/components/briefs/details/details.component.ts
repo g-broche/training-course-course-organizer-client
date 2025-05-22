@@ -8,6 +8,7 @@ import { BriefService } from '../../../services/brief.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CdkDragDrop, transferArrayItem, DragDropModule } from '@angular/cdk/drag-drop';
+import { isReturnStatement } from 'typescript';
 
 
 @Component({
@@ -24,11 +25,11 @@ export class BriefDetailsComponent {
   studentList$: Observable<Student[] | null>;
   assignedStudents: Map<number, Student> = new Map();
   groups: { name: string, members: Student[] }[] = [];
+  isGroupGenerationLocked = false;
 
   get assignedStudentAmount(): number {
     return this.assignedStudents.size
   }
-
   constructor(
     private userService: UserService,
     private promoService: PromoService,
@@ -104,6 +105,7 @@ export class BriefDetailsComponent {
   }
 
   generateGroups() {
+    if (this.isGroupGenerationLocked) { return; }
     const amount = this.countNecessaryGroups(this.assignedStudentAmount, this.form.get('amountPerGroup')!.value)
     this.createRequiredGroups(amount)
     this.allocateStudentsToGroups()
@@ -220,5 +222,9 @@ export class BriefDetailsComponent {
 
   get connectedDropListIds(): string[] {
     return this.groups.map((_, i) => 'group-' + i);
+  }
+
+  lockGroups() {
+    this.isGroupGenerationLocked = true;
   }
 }

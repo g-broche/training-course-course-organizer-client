@@ -2,47 +2,11 @@
     "data": [
         {
             "id": 1,
-            "name": "brief 1",
-            "content": "static html and css",
-            "createdAt": 1747397038,
-            "editedAt": null,
-            "status": "ended",
-            "authorId": 1
-        },
-        {
-            "id": 2,
-            "name": "brief 2",
-            "content": "javascript",
-            "createdAt": 1747398138,
-            "editedAt": null,
-            "status": "ended",
-            "authorId": 1
-        },
-        {
-            "id": 3,
-            "name": "brief 3",
-            "content": "SQL",
-            "createdAt": 1747313038,
-            "editedAt": null,
-            "status": "ended",
-            "authorId": 1
-        },
-        {
-            "id": 4,
-            "name": "brief 4",
-            "content": "Angular",
+            "name": "brief Angular",
+            "content": "this brief sample data because we have no backend to work with",
             "createdAt": 1747353038,
             "editedAt": null,
             "status": "ongoing",
-            "authorId": 1
-        },
-        {
-            "id": 5,
-            "name": "brief 5",
-            "content": "Java",
-            "createdAt": 1747357038,
-            "editedAt": null,
-            "status": "planned",
             "authorId": 1
         }
     ]

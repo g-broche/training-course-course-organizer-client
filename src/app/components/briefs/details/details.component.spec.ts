@@ -9,12 +9,12 @@ import { BriefService } from '../../../services/brief.service';
 import { Student } from '../../../../types/types';
 
 const mockBrief = {
-  id: 4,
-  name: 'brief 4',
-  content: 'Angular',
+  id: 1,
+  name: "brief Angular",
+  content: "this brief sample data because we have no backend to work with",
   createdAt: 1747353038,
   editedAt: null,
-  status: 'ongoing',
+  status: "ongoing",
   authorId: 1
 };
 

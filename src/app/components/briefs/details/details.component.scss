@@ -29,11 +29,19 @@
             width: 1rem;
         }
     }
+
+    button {
+        align-self: center;
+    }
 }
 
 .group-affectation {
     padding: 1rem 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
 
     .group-list {
         width: 100%;
@@ -101,4 +109,8 @@
 
 .member.cdk-drag-placeholder {
     visibility: hidden;
+}
+
+.drag-handle {
+    touch-action: none;
 }
