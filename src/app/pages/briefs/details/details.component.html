@@ -2,9 +2,10 @@
 @if (brief$ | async) {
 <main>
     <header>
-        <h1>Brief : {{ (brief$ | async)?.name }}</h1>
+        <h2>Brief : {{ (brief$ | async)?.name }}</h2>
     </header>
     <section class="student-list">
+        <h3 class="heading">Available students</h3>
         <table class="table">
             <thead>
                 <tr>
@@ -27,10 +28,12 @@
                     </td>
                     <td class="actions">
                         @if(isStudentAssigned(student.id)){
-                        <button (click)="removeStudentFromBrief(student.id)" class="warning">Unassign</button>
+                        <button [disabled]="isGroupGenerationLocked" (click)="removeStudentFromBrief(student.id)"
+                            class="warning">Unassign</button>
                         }
                         @else{
-                        <button (click)="addStudentToBrief(student)">Assign</button>
+                        <button [disabled]="isGroupGenerationLocked"
+                            (click)="addStudentToBrief(student)">Assign</button>
                         }
                     </td>
                 </tr>
@@ -39,7 +42,7 @@
         </table>
     </section>
     <section class="group-generation">
-        <h2>Groups configuration</h2>
+        <h3 class="heading">Groups configuration</h3>
         <form [formGroup]="form">
             <div class="form-group">
                 <label for="group-student-amount">Students per group</label>
@@ -50,11 +53,14 @@
                 <label for="mix-dwwm">Mix DWWM</label>
                 <input type="checkbox" formControlName="mixDwwm" id="mix-dwwm">
             </div>
-            <button [disabled]="isGroupGenerationLocked" (click)="generateGroups()">Generate</button>
+            <button [disabled]="isGroupGenerationLocked || !areStudentsAssigned"
+                (click)="generateGroups()">Generate</button>
         </form>
     </section>
+
     <section class="group-affectation">
-        <h2>Groups affectation</h2>
+        @if(isBriefGroupIntended){
+        <h3 class="heading">Groups affectation</h3>
         <div class="group-list" cdkDropListGroup>
             @for (group of groups; track $index) {
             <div class="group">
@@ -72,7 +78,12 @@
             </div>
             }
         </div>
-        <button (click)="lockGroups()">Confirm groups</button>
+        <button (click)="lockGroups()">Confirm brief groups</button>
+        }
+        @else {
+        <button (click)="lockGroups()">Confirm brief being individual</button>
+        }
+
     </section>
 </main>
 }

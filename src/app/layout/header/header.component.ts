@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 import { LoginFormComponent } from '../../components/login-form/login-form.component';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,7 @@ import { UserService } from '../../services/user.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Input() title!: string
   user$: Observable<User | null>
   constructor(private userService: UserService, private modal: ModalService) {
     this.user$ = this.userService.user$

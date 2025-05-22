@@ -30,6 +30,15 @@ export class BriefDetailsComponent {
   get assignedStudentAmount(): number {
     return this.assignedStudents.size
   }
+
+  get areStudentsAssigned(): boolean {
+    return this.assignedStudents.size > 0
+  }
+
+  get isBriefGroupIntended(): boolean {
+    return this.groups.length > 0
+  }
+
   constructor(
     private userService: UserService,
     private promoService: PromoService,
@@ -105,7 +114,7 @@ export class BriefDetailsComponent {
   }
 
   generateGroups() {
-    if (this.isGroupGenerationLocked) { return; }
+    if (this.isGroupGenerationLocked || !this.areStudentsAssigned) { return; }
     const amount = this.countNecessaryGroups(this.assignedStudentAmount, this.form.get('amountPerGroup')!.value)
     this.createRequiredGroups(amount)
     this.allocateStudentsToGroups()

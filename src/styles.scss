@@ -30,8 +30,6 @@ main {
 
 h1 {
     font-size: $font-size-largest;
-    text-align: center;
-    margin-bottom: 2rem;
 }
 
 h2 {
@@ -84,6 +82,15 @@ button.danger,
 .button.danger {
     background-color: $color-danger;
 }
+
+button:disabled {
+    filter: grayscale(.60);
+}
+
+button:disabled:hover {
+    cursor: default;
+}
+
 
 a {
     text-decoration: none;

@@ -12,7 +12,7 @@ import { FooterComponent } from './layout/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {
-  title = 'client';
+  title = 'CoursePlanner';
 
   @ViewChild('modalHost', { read: ViewContainerRef, static: true }) modalHost!: ViewContainerRef;
 
