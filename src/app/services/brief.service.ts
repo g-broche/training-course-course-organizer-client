@@ -11,13 +11,13 @@ export class BriefService {
   }
 
   retrieveBriefs() {
-    return this.http.get<{ data: Brief[] }>('/assets/mock-data/briefs.json').pipe(
+    return this.http.get<{ data: Brief[] }>('assets/mock-data/briefs.json').pipe(
       map((response) => response.data)
     );
   }
 
   retrieveBriefById(id: number): Observable<Brief | null> {
-    return this.http.get<{ data: Brief[] }>('/assets/mock-data/briefs.json').pipe(
+    return this.http.get<{ data: Brief[] }>('assets/mock-data/briefs.json').pipe(
       map((response) => {
         const brief = response.data.find(brief => brief.id === id);
         return brief ?? null;

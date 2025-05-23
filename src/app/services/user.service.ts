@@ -32,7 +32,7 @@ export class UserService {
   }
 
   logTestUser(credentials: Credentials): Observable<User> {
-    return this.http.get<{ data: MockUser[] }>('/assets/mock-data/users.json').pipe(
+    return this.http.get<{ data: MockUser[] }>('assets/mock-data/users.json').pipe(
       map((response) => {
         const foundUser = response.data.find(
           (u) => u.email === credentials.email && u.password === credentials.password
