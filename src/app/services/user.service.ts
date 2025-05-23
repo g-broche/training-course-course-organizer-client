@@ -23,7 +23,7 @@ export class UserService {
 
   login(credentials: Credentials): Observable<User> {
     return this.http.post<User>('/api/login', credentials).pipe(
-      tap((user) => this.setUser(user)) // Automatically store the user
+      tap((user) => this.setUser(user))
     );
   }
 
@@ -31,6 +31,11 @@ export class UserService {
     this.setUser(null)
   }
 
+  /**
+   * Gets a user from the mock data if provided credentials are valid
+   * @param credentials email and password inputed
+   * @returns user if found
+   */
   logTestUser(credentials: Credentials): Observable<User> {
     return this.http.get<{ data: MockUser[] }>('assets/mock-data/users.json').pipe(
       map((response) => {
@@ -58,6 +63,9 @@ export class UserService {
     );
   }
 
+  /**
+   * returns promos associated with the logged user
+   */
   get userPromos$(): Observable<MockPromo[] | null> {
     return this.user$.pipe(
       map(user => {
