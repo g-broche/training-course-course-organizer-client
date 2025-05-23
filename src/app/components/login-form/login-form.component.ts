@@ -28,6 +28,9 @@ export class LoginFormComponent {
     });
   }
 
+  /**
+   * attempts to log user based on provided credentials
+   */
   submit() {
     const credentials = this.form.value;
     this.userService.logTestUser(credentials).subscribe({

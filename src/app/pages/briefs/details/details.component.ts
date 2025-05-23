@@ -59,6 +59,9 @@ export class BriefDetailsComponent {
     this.generateForm();
   }
 
+  /**
+   * creates form group for controls related to group generation config
+   */
   generateForm() {
     this.form = this.formBuilder.group({
       amountPerGroup: [
@@ -76,7 +79,10 @@ export class BriefDetailsComponent {
     });
   }
 
-  private updateAmountValidator() {
+  /**
+   * updates the validator for group amount to reflect the amount of assigned students
+   */
+  private updateAmountValidator(): void {
     const amountControl = this.form.get('amountPerGroup');
     if (!amountControl) return;
 
@@ -97,6 +103,12 @@ export class BriefDetailsComponent {
     return this.assignedStudents.has(studentId)
   }
 
+  /**
+   * converts the student age received in dd/mm/yyyy format to a Date
+   * and then compares it to now to calculate the student's age
+   * @param student 
+   * @returns student age
+   */
   calculateStudentAge(student: Student): number {
     const [day, month, year] = student.birthdate.split('/').map(Number);
     const birthDate = new Date(year, month - 1, day);
@@ -125,18 +137,31 @@ export class BriefDetailsComponent {
     this.updateAmountValidator()
   }
 
+  /**
+   * get the promo the student is currently following based on promo status being "ongoing"
+   * @param student 
+   * @returns promo name.
+   */
   getOngoingPromoName(student: Student): string {
     const ongoingPromo = student.promos.find(promo => promo.status === 'ongoing');
     return ongoingPromo?.name || 'no valid promo';
   }
 
-  generateGroups() {
+  /**
+   * Generates groups based on the number of assigned studen of the desired group size
+   * and then allocated students to them
+   */
+  generateGroups(): void {
     if (this.isGroupGenerationLocked || !this.areStudentsAssigned) { return; }
     const amount = this.countNecessaryGroups(this.assignedStudentAmount, this.form.get('amountPerGroup')!.value)
     this.createRequiredGroups(amount)
     this.allocateStudentsToGroups()
   }
 
+  /**
+   * creates required about of groups
+   * @param amount 
+   */
   createRequiredGroups(amount: number) {
     this.groups = []
     for (let index = 0; index < amount; index++) {
@@ -150,21 +175,22 @@ export class BriefDetailsComponent {
   countNecessaryGroups(studentAmount: number, amountPerGroup: number) {
     return Math.ceil(studentAmount / amountPerGroup)
   }
-  countMaxPerGroups(studentAmount: number, amountPerGroup: number) {
-    return Math.ceil(studentAmount / amountPerGroup)
-  }
 
-  allocateStudentsToGroups() {
+  /**
+   * Allocates students to group per defined group config
+   * @returns 
+   */
+  allocateStudentsToGroups(): void {
     const mixDwwm = this.form.get('mixDwwm')?.value;
     const amountPerGroup = this.form.get('amountPerGroup')!.value;
 
     const students = Array.from(this.assignedStudents.values());
 
-    // Clear groups
+    // Clear groups in case this is not the first generation attempt
     this.groups.forEach(group => group.members = []);
 
+    // Use the allocation method depending on user config selection
     if (!mixDwwm) {
-      // Default random allocation
       this.allocateGroupMembersRandomly(students, amountPerGroup);
       return;
     }
@@ -172,6 +198,11 @@ export class BriefDetailsComponent {
 
   }
 
+  /**
+   * allocate students randomly to groups using the given students and amount per group
+   * @param students 
+   * @param amountPerGroup 
+   */
   allocateGroupMembersRandomly(students: Student[], amountPerGroup: number) {
     let studentsToAllocate = this.shuffleArray([...students]);
     while (studentsToAllocate.length > 0) {
@@ -183,6 +214,12 @@ export class BriefDetailsComponent {
     }
   }
 
+  /**
+   * allocate students randomly while also keeping a balance between DWWM and non DWWM students
+   * as much as the spread between both permits it
+   * @param students 
+   * @param amountPerGroup 
+   */
   allocateGroupMembersRandomlyWhileBalancingDWWM(students: Student[], amountPerGroup: number) {
     // Split students based on DWWM factor
     let dwwmStudents = students.filter(s => this.hasStudentDoneDWWM(s));
@@ -231,6 +268,12 @@ export class BriefDetailsComponent {
     return arr;
   }
 
+  /**
+   * Handles drag and drop event to manually associate a student to a different
+   * @param event 
+   * @param targetGroup 
+   * @returns 
+   */
   onStudentDrop(event: CdkDragDrop<Student[]>, targetGroup: { name: string, members: Student[] }) {
     const previousGroup = this.groups.find(g => g.members === event.previousContainer.data);
     const currentGroup = this.groups.find(g => g.members === event.container.data);
@@ -246,10 +289,18 @@ export class BriefDetailsComponent {
     );
   }
 
+  /**
+   * required to make the drag and drop work
+   */
   get connectedDropListIds(): string[] {
     return this.groups.map((_, i) => 'group-' + i);
   }
 
+  /**
+   * will prevent further assignement and generation
+   * if a backend existed in brief it would also use the brief service for a create (or update)
+   * request
+   */
   lockGroups() {
     this.isGroupGenerationLocked = true;
   }

@@ -22,6 +22,9 @@ export class HeaderComponent {
     this.user$ = this.userService.user$
   }
 
+  /**
+   * Opens login form through modal component
+   */
   openLogin() {
     this.modal.open(LoginFormComponent);
   }
@@ -32,6 +35,9 @@ export class HeaderComponent {
     this.mustOpenUserControls = false
   }
 
+  /**
+   * toggles the user window to see detailed information and logout
+   */
   toggleUserControls() {
     this.user$.pipe(take(1)).subscribe(user => {
       if (!user) {
