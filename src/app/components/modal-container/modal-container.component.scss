@@ -45,3 +45,9 @@ $button-close-width: 2rem;
         text-align: center;
     }
 }
+
+@media only screen and (min-width:768px) {
+    .modal-window {
+        width: 50%;
+    }
+}

@@ -10,6 +10,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th class="responsive-data">Age</th>
                     <th>DWWM</th>
                     <th>Promo</th>
                     <th>Actions</th>
@@ -19,6 +20,7 @@
                 @for (student of studentList$ | async; track $index) {
                 <tr>
                     <td>{{ student.lastName }} {{ student.firstName }}</td>
+                    <td class="responsive-data">{{ calculateStudentAge(student) }}</td>
                     <td>
                         @if(hasStudentDoneDWWM(student)) {Yes}
                         @else {No}
@@ -53,8 +55,10 @@
                 <label for="mix-dwwm">Mix DWWM</label>
                 <input type="checkbox" formControlName="mixDwwm" id="mix-dwwm">
             </div>
-            <button [disabled]="isGroupGenerationLocked || !areStudentsAssigned"
-                (click)="generateGroups()">Generate</button>
+            <div class="form-buttons">
+                <button [disabled]="isGroupGenerationLocked || !areStudentsAssigned"
+                    (click)="generateGroups()">Generate</button>
+            </div>
         </form>
     </section>
 

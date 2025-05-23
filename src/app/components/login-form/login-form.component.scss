@@ -25,5 +25,9 @@
             flex-direction: column;
             gap: .25rem;
         }
+
+        button {
+            align-self: flex-end;
+        }
     }
 }
