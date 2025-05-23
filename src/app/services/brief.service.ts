@@ -10,12 +10,21 @@ export class BriefService {
   constructor(private http: HttpClient) {
   }
 
+  /**
+   * returns all available briefs
+   * @returns brief array
+   */
   retrieveBriefs() {
     return this.http.get<{ data: Brief[] }>('assets/mock-data/briefs.json').pipe(
       map((response) => response.data)
     );
   }
 
+  /**
+   * returns a specific brief if found
+   * @param id brief id to look for
+   * @returns Observable brief or null to resolve
+   */
   retrieveBriefById(id: number): Observable<Brief | null> {
     return this.http.get<{ data: Brief[] }>('assets/mock-data/briefs.json').pipe(
       map((response) => {

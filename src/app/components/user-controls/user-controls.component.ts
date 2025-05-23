@@ -18,6 +18,9 @@ export class UserControlsComponent {
     this.user$ = this.userService.user$;
   }
 
+  /**
+   * send request for logout to parent component
+   */
   emitLogout() {
     this.logoutRequested.emit();
   }
