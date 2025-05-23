@@ -1,0 +1,8 @@
+<main>
+    @if (isUserLogged$ | async){
+    <app-dashboard-menu></app-dashboard-menu>
+    }
+    @else {
+    <app-presentation></app-presentation>
+    }
+</main>

@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "label": "confidence",
+            "isHardSkill": false
+        },
+        {
+            "id": 2,
+            "label": "french",
+            "isHardSkill": true
+        },
+        {
+            "id": 3,
+            "label": "create static applications",
+            "isHardSkill": true
+        },
+        {
+            "id": 4,
+            "label": "create dynamic applications",
+            "isHardSkill": true
+        },
+        {
+            "id": 5,
+            "label": "SQL",
+            "isHardSkill": true
+        },
+        {
+            "id": 6,
+            "label": "MongoDB",
+            "isHardSkill": true
+        },
+        {
+            "id": 7,
+            "label": "curious",
+            "isHardSkill": false
+        },
+        {
+            "id": 8,
+            "label": "logic",
+            "isHardSkill": false
+        },
+        {
+            "id": 9,
+            "label": "Angular",
+            "isHardSkill": true
+        },
+        {
+            "id": 10,
+            "label": "Java",
+            "isHardSkill": true
+        }
+    ]
+}

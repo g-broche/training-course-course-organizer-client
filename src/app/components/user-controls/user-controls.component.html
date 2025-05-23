@@ -1,0 +1,9 @@
+@if (mustOpen) {
+@if (user$ | async; as user) {
+<section class="logged-user-controls" #userControls>
+
+    <p>Logged as {{user.firstName}}</p>
+    <button class="danger" (click)="emitLogout()">logout</button>
+</section>
+}
+}

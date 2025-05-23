@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ModalService } from './services/modal.service';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'client';
+export class AppComponent implements AfterViewInit {
+  title = 'CoursePlanner';
+
+  @ViewChild('modalHost', { read: ViewContainerRef, static: true }) modalHost!: ViewContainerRef;
+
+  constructor(private modalService: ModalService) { }
+
+  ngAfterViewInit(): void {
+    this.modalService.registerHost(this.modalHost);
+  }
 }

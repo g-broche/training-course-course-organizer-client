@@ -1,0 +1,52 @@
+@use "../../../scss" as *;
+
+header {
+    height: 75px;
+    width: 100%;
+    padding: 1rem;
+    background-color: $color-background-light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .icon-wrapper {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .icon-wrapper:hover {
+        cursor: pointer;
+    }
+
+    svg {
+        border-radius: 50%;
+        fill: $color-neutral;
+    }
+
+    .logged-user {
+        position: relative;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    header {
+        height: 100px;
+        padding: 2rem;
+
+        .icon-wrapper {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    header {
+        padding: 2rem 3rem;
+
+        .icon-wrapper {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+}

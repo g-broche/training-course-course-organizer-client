@@ -1,0 +1,41 @@
+@if (isUserTeacher$ | async) {
+<main>
+    <header>
+        <h2>Briefs</h2>
+    </header>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (brief of briefs$ | async; track $index) {
+            <tr>
+                <td>{{ brief.name }}</td>
+                <td>{{ brief.status }}</td>
+                <td class="actions">
+                    @switch (brief.status) {
+                    @case ("ended") {
+                    <button>Consult</button>
+                    }
+                    @case ("ongoing") {
+                    <!-- <button class="warning">Edit</button> -->
+                    <button [routerLink]="['/briefs', brief.id]">Assign</button>
+                    }
+                    @case ("planned") {
+                    <button class="warning">Edit</button>
+                    <button class="danger">Delete</button>
+                    }
+                    @default {
+                    }
+                    }
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</main>
+}

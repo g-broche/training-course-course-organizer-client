@@ -1,0 +1,8 @@
+<h2>Menu</h2>
+<nav>
+    <ul>
+        @if (isUserTeacher$ | async) {
+        <li><a class="button" role="button" routerLink="/briefs">Briefs</a></li>
+        }
+    </ul>
+</nav>
