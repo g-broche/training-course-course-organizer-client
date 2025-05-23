@@ -22,7 +22,7 @@ export class PromoService {
           return of([]);
         }
 
-        return this.http.get<{ data: Student[] }>('/assets/mock-data/students.json').pipe(
+        return this.http.get<{ data: Student[] }>('assets/mock-data/students.json').pipe(
           map((response) => {
             const promoIds = promos.filter(promo => promo.status = "ongoing").map(promo => promo.id)
             return response.data.filter(student =>
