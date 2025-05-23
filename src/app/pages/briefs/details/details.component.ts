@@ -99,6 +99,7 @@ export class BriefDetailsComponent {
 
 
   addStudentToBrief(student: Student): void {
+    if (this.isGroupGenerationLocked) { return }
     this.assignedStudents.set(student.id, student)
     this.updateAmountValidator()
   }

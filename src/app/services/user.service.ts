@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  setUser(user: User) {
+  setUser(user: User | null) {
     this.userSubject.next(user);
   }
 
@@ -25,6 +25,10 @@ export class UserService {
     return this.http.post<User>('/api/login', credentials).pipe(
       tap((user) => this.setUser(user)) // Automatically store the user
     );
+  }
+
+  logout(): void {
+    this.setUser(null)
   }
 
   logTestUser(credentials: Credentials): Observable<User> {

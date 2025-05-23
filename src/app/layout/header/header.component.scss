@@ -14,5 +14,14 @@ header {
         width: 2rem;
     }
 
+    svg {
+        border-radius: 50%;
+        fill: $color-neutral;
+    }
+
     margin-bottom: 2rem;
+
+    .logged-user {
+        position: relative;
+    }
 }
