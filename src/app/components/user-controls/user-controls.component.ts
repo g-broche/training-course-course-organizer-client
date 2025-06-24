@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { User } from '../../../types/types';
+import { User } from '../../../types/base';
 import { Observable } from 'rxjs';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';

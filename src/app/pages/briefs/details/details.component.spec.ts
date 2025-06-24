@@ -6,7 +6,7 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { of } from 'rxjs';
 import { BriefService } from '../../../services/brief.service';
-import { Student } from '../../../../types/types';
+import { Student } from '../../../../types/base';
 
 const mockBrief = {
   id: 1,

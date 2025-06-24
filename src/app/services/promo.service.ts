@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable, of, switchMap } from 'rxjs';
-import { MockPromo, Student } from '../../types/types';
+import { MockPromo, Student } from '../../types/base';
 import { UserService } from './user.service';
 import { HttpClient } from '@angular/common/http';
 

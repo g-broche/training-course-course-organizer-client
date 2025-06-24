@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ModalService } from '../../services/modal.service';
 import { UserService } from '../../services/user.service';
-import { User } from '../../../types/types';
+import { User } from '../../../types/base';
 import { CommonModule } from '@angular/common';
 
 @Component({

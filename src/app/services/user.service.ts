@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Credentials, MockPromo, MockUser, User } from '../../types/types';
+import { Credentials, MockPromo, MockUser, User } from '../../types/base';
 import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { omit } from '../shared/utils/data-utils';

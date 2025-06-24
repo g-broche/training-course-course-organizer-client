@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
-import { Brief } from '../../types/types';
+import { Brief } from '../../types/base';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

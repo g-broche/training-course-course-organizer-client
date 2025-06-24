@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Brief, Student, User } from '../../../../types/types';
+import { Brief, Student, User } from '../../../../types/base';
 import { UserService } from '../../../services/user.service';
 import { PromoService } from '../../../services/promo.service';
 import { CommonModule } from '@angular/common';
