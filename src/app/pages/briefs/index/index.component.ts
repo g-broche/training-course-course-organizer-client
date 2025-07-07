@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Brief, User } from '../../../../types/types';
+import { Brief, User } from '../../../../types/base';
 import { UserService } from '../../../services/user.service';
 import { BriefService } from '../../../services/brief.service';
 import { CommonModule } from '@angular/common';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { Observable } from 'rxjs';
-import { User } from '../../../types/types';
+import { User } from '../../../types/base';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 

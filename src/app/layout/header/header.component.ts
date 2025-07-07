@@ -3,7 +3,7 @@ import { ModalService } from '../../services/modal.service';
 import { LoginFormComponent } from '../../components/login-form/login-form.component';
 import { CommonModule } from '@angular/common';
 import { map, Observable, take } from 'rxjs';
-import { User } from '../../../types/types';
+import { User } from '../../../types/base';
 import { UserService } from '../../services/user.service';
 import { RouterLink } from '@angular/router';
 import { UserControlsComponent } from '../../components/user-controls/user-controls.component';
